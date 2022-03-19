@@ -4,16 +4,15 @@ function compute()
     // declaring varialbles and taking values 
    
     let principal = document.getElementById('principal').value;
+    parseInt(principal);
     if(principal <= 0) {
         alert('please enter a positive value of principal amount');
         document.getElementById('principal').focus();
     }
     let rate = document.getElementById('rate').value;
     let years = parseInt(document.getElementById('years').value);
-    console.log(years)
     let interest = principal * years * (rate /100);
     var year = new Date().getFullYear()+ years;
-    console.log(year)
     let total = parseInt(interest);
     // showing result in span tag
     document.getElementById('result').innerText = 
